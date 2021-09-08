@@ -2,6 +2,9 @@ import React, { Component } from "react";       // React안에서 컴포넌트 C
 
 class Nav extends Component {
     render() {
+
+        console.log('Nav render Start')
+
         return (
             <nav>
                 <ul>
