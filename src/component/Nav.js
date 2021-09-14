@@ -1,6 +1,19 @@
 import React, { Component } from "react";       // React안에서 컴포넌트 Class를 로딩한 것이다.
 
 class Nav extends Component {
+
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        console.log('Nav render shouldComponentUpdate Start',
+        nextProps.data, this.props.data
+        );
+
+        if (this.props.data === nextProps.data) {
+            return false;
+        }
+
+        return true;
+    }
+
     render() {
 
         console.log('Nav render Start');
